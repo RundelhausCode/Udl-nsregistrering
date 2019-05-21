@@ -1,0 +1,53 @@
+﻿<Window x:Class="Udlånsregistrering.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Udlånsregistrering"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+        
+    <Grid>
+        <TabControl HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="774">
+            <TabItem Header="Udlåne ">
+                <Grid Background="#FFE5E5E5">
+                    
+                    <Label Content="Elevnummer" HorizontalAlignment="Left" Height="24" Margin="10,67,0,0" VerticalAlignment="Top" Width="89"/>
+                    <Label Content="Computernummer" HorizontalAlignment="Left" Height="24" Margin="10,10,0,0" VerticalAlignment="Top" Width="107"/>
+                    <TextBox HorizontalAlignment="Left" AcceptsReturn="False" Height="23" Margin="10,39,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="201"/>
+                    <TextBox HorizontalAlignment="Left" AcceptsReturn="False" Height="23" Margin="10,96,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="201"/>
+                    <Button Content="Udlåne" HorizontalAlignment="Left" Height="28" Margin="10,240,0,0" VerticalAlignment="Top" Width="94"/>
+                    <Label Content=":f.eks. 000121" HorizontalAlignment="Left" Height="23" Margin="211,39,0,0" VerticalAlignment="Top" Width="110" FontStyle="Italic" Foreground="#FFB4B4B4"/>
+                    <Label Content=":f.eks. PC-0722" HorizontalAlignment="Left" Height="23" Margin="211,96,0,0" VerticalAlignment="Top" Width="110" FontStyle="Italic" Foreground="#FFB4B4B4"/>
+                    <Label Content="Udlånsdato" HorizontalAlignment="Left" Height="24" Margin="10,124,0,0" VerticalAlignment="Top" Width="113"/>
+                    <DatePicker HorizontalAlignment="Left" Margin="10,153,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Udløbsdato" HorizontalAlignment="Left" Height="24" Margin="10,182,0,0" VerticalAlignment="Top" Width="113"/>
+                    <DatePicker Localization.Attributes="" HorizontalAlignment="Left" Margin="10,211,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="computer oversigt">
+                <Grid Background="#FFE5E5E5" Margin="0,-1,-0.2,1">
+                    <DataGrid HorizontalAlignment="Left" Height="348" VerticalAlignment="Top" Width="769" x:Name="udlånt" Margin="0,24,-0.2,0"/>
+                    <ComboBox HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="250">
+                        <ComboBoxItem Name="one">overskredet udlånstider</ComboBoxItem>
+                        <ComboBoxItem Name="two">tilgængelige computere</ComboBoxItem>
+                        <ComboBoxItem Name="three">udlånte computere</ComboBoxItem>
+                        <ComboBoxItem Name="four">overskredet udlånstider</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="283,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+                    <Button Content="Elev søgning" HorizontalAlignment="Left" Height="24" Margin="411,0,0,0" VerticalAlignment="Top" Width="96"/>
+                    <TextBox HorizontalAlignment="Left" Height="24" Margin="544,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
+                    <Button Content="PC søgning" HorizontalAlignment="Left" Height="24" Margin="673,0,0,0" VerticalAlignment="Top" Width="96"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="registre elev">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="registre computer">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
